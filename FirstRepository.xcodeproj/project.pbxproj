@@ -12,6 +12,12 @@
 		530BFF02238115F6009C913C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530BFF00238115F6009C913C /* Main.storyboard */; };
 		530BFF04238115F6009C913C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530BFF03238115F6009C913C /* Assets.xcassets */; };
 		530BFF07238115F6009C913C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530BFF05238115F6009C913C /* LaunchScreen.storyboard */; };
+		5372FF8D238118750026503C /* ContactsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372FF8A238118750026503C /* ContactsList.swift */; };
+		5372FF8F238118750026503C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372FF8C238118750026503C /* Contact.swift */; };
+		5372FF9523811A8D0026503C /* dataFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5372FF9423811A8D0026503C /* dataFile.txt */; };
+		5372FF9723811BA90026503C /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372FF9623811BA90026503C /* ServiceManager.swift */; };
+		5372FF9923811BD10026503C /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372FF9823811BD10026503C /* NetworkConstants.swift */; };
+		5372FFB92382E9340026503C /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372FFB82382E9340026503C /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		530BFF03238115F6009C913C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		530BFF06238115F6009C913C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		530BFF08238115F6009C913C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5372FF8A238118750026503C /* ContactsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsList.swift; sourceTree = "<group>"; };
+		5372FF8C238118750026503C /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		5372FF9423811A8D0026503C /* dataFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataFile.txt; sourceTree = "<group>"; };
+		5372FF9623811BA90026503C /* ServiceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		5372FF9823811BD10026503C /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		5372FFB82382E9340026503C /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,28 @@
 		530BFEFB238115F6009C913C /* FirstRepository */ = {
 			isa = PBXGroup;
 			children = (
+				5372FF89238118750026503C /* Models */,
 				530BFEFC238115F6009C913C /* AppDelegate.swift */,
 				530BFEFE238115F6009C913C /* ViewController.swift */,
+				5372FFB82382E9340026503C /* CustomTableViewCell.swift */,
 				530BFF00238115F6009C913C /* Main.storyboard */,
 				530BFF03238115F6009C913C /* Assets.xcassets */,
 				530BFF05238115F6009C913C /* LaunchScreen.storyboard */,
 				530BFF08238115F6009C913C /* Info.plist */,
 			);
 			path = FirstRepository;
+			sourceTree = "<group>";
+		};
+		5372FF89238118750026503C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5372FF8A238118750026503C /* ContactsList.swift */,
+				5372FF8C238118750026503C /* Contact.swift */,
+				5372FF9623811BA90026503C /* ServiceManager.swift */,
+				5372FF9823811BD10026503C /* NetworkConstants.swift */,
+				5372FF9423811A8D0026503C /* dataFile.txt */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				530BFF07238115F6009C913C /* LaunchScreen.storyboard in Resources */,
+				5372FF9523811A8D0026503C /* dataFile.txt in Resources */,
 				530BFF04238115F6009C913C /* Assets.xcassets in Resources */,
 				530BFF02238115F6009C913C /* Main.storyboard in Resources */,
 			);
@@ -135,8 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5372FF9923811BD10026503C /* NetworkConstants.swift in Sources */,
 				530BFEFF238115F6009C913C /* ViewController.swift in Sources */,
 				530BFEFD238115F6009C913C /* AppDelegate.swift in Sources */,
+				5372FFB92382E9340026503C /* CustomTableViewCell.swift in Sources */,
+				5372FF8F238118750026503C /* Contact.swift in Sources */,
+				5372FF8D238118750026503C /* ContactsList.swift in Sources */,
+				5372FF9723811BA90026503C /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +314,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FirstRepository/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -290,6 +323,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.harsha.FirstRepository;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -299,7 +333,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = FirstRepository/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -307,6 +342,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.harsha.FirstRepository;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
