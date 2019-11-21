@@ -12,6 +12,7 @@
 		530BFF02238115F6009C913C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530BFF00238115F6009C913C /* Main.storyboard */; };
 		530BFF04238115F6009C913C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 530BFF03238115F6009C913C /* Assets.xcassets */; };
 		530BFF07238115F6009C913C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 530BFF05238115F6009C913C /* LaunchScreen.storyboard */; };
+		53592674238440BF00F911F9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53592673238440BF00F911F9 /* NetworkManager.swift */; };
 		5372FF8D238118750026503C /* ContactsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372FF8A238118750026503C /* ContactsList.swift */; };
 		5372FF8F238118750026503C /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5372FF8C238118750026503C /* Contact.swift */; };
 		5372FF9523811A8D0026503C /* dataFile.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5372FF9423811A8D0026503C /* dataFile.txt */; };
@@ -28,6 +29,7 @@
 		530BFF03238115F6009C913C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		530BFF06238115F6009C913C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		530BFF08238115F6009C913C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53592673238440BF00F911F9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5372FF8A238118750026503C /* ContactsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsList.swift; sourceTree = "<group>"; };
 		5372FF8C238118750026503C /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		5372FF9423811A8D0026503C /* dataFile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dataFile.txt; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		530BFEFB238115F6009C913C /* FirstRepository */ = {
 			isa = PBXGroup;
 			children = (
+				535926722384404900F911F9 /* Services */,
 				5372FF89238118750026503C /* Models */,
 				530BFEFC238115F6009C913C /* AppDelegate.swift */,
 				530BFEFE238115F6009C913C /* ViewController.swift */,
@@ -76,6 +79,14 @@
 				530BFF08238115F6009C913C /* Info.plist */,
 			);
 			path = FirstRepository;
+			sourceTree = "<group>";
+		};
+		535926722384404900F911F9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				53592673238440BF00F911F9 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		5372FF89238118750026503C /* Models */ = {
@@ -166,6 +177,7 @@
 				530BFEFF238115F6009C913C /* ViewController.swift in Sources */,
 				530BFEFD238115F6009C913C /* AppDelegate.swift in Sources */,
 				5372FFB92382E9340026503C /* CustomTableViewCell.swift in Sources */,
+				53592674238440BF00F911F9 /* NetworkManager.swift in Sources */,
 				5372FF8F238118750026503C /* Contact.swift in Sources */,
 				5372FF8D238118750026503C /* ContactsList.swift in Sources */,
 				5372FF9723811BA90026503C /* ServiceManager.swift in Sources */,

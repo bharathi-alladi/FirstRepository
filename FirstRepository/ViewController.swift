@@ -11,8 +11,10 @@ import UIKit
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     @IBOutlet var contacts_tableView : UITableView!
+    @IBOutlet var activityIndicator : UIActivityIndicatorView!
     let listObject = ContactsList.init()
     var fetchedData:[Contact]!
+    var completionHandler : ((Data?,URLResponse?,Error?) -> Void )?
     
     override func viewDidLoad()
     {
@@ -21,6 +23,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.fetchedData = listObject.fetch()
         self.contacts_tableView.dataSource = self
         self.contacts_tableView.delegate = self
+        
+        self.completionHandler = {
+            (data : Data?, urlresponse : URLResponse?, error : Error? ) -> Void in
+            
+            print(data)
+            print(urlresponse)
+            print(error?.localizedDescription)
+            
+            DispatchQueue.main.async(execute: {() -> Void in
+                self.activityIndicator.stopAnimating()
+            })
+    }
+        self.activityIndicator.startAnimating()
+        self.getContactList()
         
     }
     
@@ -45,20 +61,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-    
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func getContactList (){
+        
+        let url = URL.init(string: "http://gojek-contacts-app.herokuapp.com/contacts.json")
+        let urlRequest = URLRequest.init(url: url!)
+        let defaultConfiq = URLSessionConfiguration.default
+        let urlSession = URLSession.init(configuration: defaultConfiq)
         
         
-//        print(item0_fullname)
+        let dataTask = urlSession.dataTask(with: urlRequest, completionHandler: self.completionHandler!)
+        dataTask.resume()
+        
         
     }
     
-    
-    
-    
-    
-    
+        
     
 }
+
 
 

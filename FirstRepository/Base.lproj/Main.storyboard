@@ -75,6 +75,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jmo-Zp-A40">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="7n3-Ec-yHw"/>
+                                    <constraint firstAttribute="width" constant="20" id="NcR-Xh-h2Z"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -82,10 +89,13 @@
                             <constraint firstItem="3ha-zv-zaH" firstAttribute="top" secondItem="zCL-y5-dRW" secondAttribute="top" id="49c-qW-oKJ"/>
                             <constraint firstItem="3ha-zv-zaH" firstAttribute="bottom" secondItem="wGz-3T-IQy" secondAttribute="bottom" id="7Yc-uo-CZY"/>
                             <constraint firstItem="3ha-zv-zaH" firstAttribute="leading" secondItem="wGz-3T-IQy" secondAttribute="leading" id="eN0-zq-B2A"/>
+                            <constraint firstItem="Jmo-Zp-A40" firstAttribute="centerX" secondItem="3ha-zv-zaH" secondAttribute="centerX" id="lcz-eQ-PSh"/>
+                            <constraint firstItem="Jmo-Zp-A40" firstAttribute="centerY" secondItem="3ha-zv-zaH" secondAttribute="centerY" id="uRJ-lu-TaZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="wGz-3T-IQy"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Jmo-Zp-A40" id="hCX-1k-ohS"/>
                         <outlet property="contacts_tableView" destination="3ha-zv-zaH" id="bsc-GZ-rrH"/>
                     </connections>
                 </viewController>
